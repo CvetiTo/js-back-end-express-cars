@@ -1,8 +1,32 @@
 {
-    "asd23457": {
-        "name": "Subaru Legacy 2.0i 4x4",
-        "description": "202 800 km. Newly imported. Manual transmission. Petrol engine.",
-        "imageUrl": "825r2ekv.jpg",
-        "price": "3300"
-    }
+  "asd23457": {
+    "name": "Subaru Legacy 2.0i 4x4",
+    "description": "202 800 km. Newly imported. Manual transmission. Petrol engine.",
+    "imageUrl": "825r2ekv.jpg",
+    "price": "3300"
+  },
+  "417dae45-7f9d": {
+    "name": "VW Golf 1.9 TDI 90ps High-Line",
+    "description": "THE PRICE IS NON-NEGOTIABLE!!! Newly imported, 202 799 km, 90hp diesel. Manual transmission.",
+    "imageUrl": "wtmgtj4g.jpg",
+    "price": 2699
+  },
+  "78c92ec8-c840": {
+    "name": "Toyota Avensis 1.6i",
+    "description": "Imported from Denmark. 203 000 km with full service history. No blemishes on the paint, well maintained interior, technically sound. Possible lease thourgh leasing company or bank or barter for another car.",
+    "imageUrl": "8ntiom8r.jpg",
+    "price": 11900
+  },
+  "96aa9e9a-abfd": {
+    "name": "Subaru Legacy 2.0i 4x4",
+    "description": "202 800 km. Newly imported. Manual transmission. Petrol engine.",
+    "imageUrl": "825r2ekv.jpg",
+    "price": 3500
+  },
+  "119a74d8-e226": {
+    "name": "Toyota aygo",
+    "description": "sdfgsdfsdgfsfgsdf",
+    "imageUrl": "8ntiom8r.jpg",
+    "price": 8000
+  }
 }
