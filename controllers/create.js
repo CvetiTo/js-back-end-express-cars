@@ -7,10 +7,17 @@ module.exports = {
       const car = {
         name: req.body.name,
         description: req.body.description,
-        imageUrl: req.body.imageUrl,
+        imageUrl: req.body.imageUrl || undefined,
         price: Number(req.body.price)
       };
-      await req.storage.createCar(car);
-      res.redirect('/');
+      try {
+        await req.storage.createCar(car);
+         res.redirect('/');
+      } catch(car){
+        console.log('Error creating record');
+        res.redirect('/create');
+      }
+      
+     
     }
 };

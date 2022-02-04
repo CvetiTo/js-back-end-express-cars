@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-const Car = require('./Car.js');
+require('./Car.js'); //const Car = 
+require('./Accessory.js'); 
 
 const connectionString = 'mongodb://localhost:27017/carbicle';
 
@@ -11,6 +12,13 @@ async function init() {
         useUnifiedTopology: true 
         }); 
         console.log('Database connected');
+
+        //await Car.create({
+        //    "name": "VW Golf 1.9 TDI 90ps High-Line",
+        //    "description": "THE PRICE IS NON-NEGOTIABLE!!! Newly imported, 202 799 km, 90hp diesel. Manual transmission.",
+        //    "imageUrl": "wtmgtj4g.jpg",
+        //    "price": 2699
+        //  });
 
         mongoose.connection.on('error', (err) =>{
             console.error('Database error');
