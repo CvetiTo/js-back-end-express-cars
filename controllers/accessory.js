@@ -3,7 +3,7 @@ module.exports = {
         res.render('createAccessory', { title: 'Create accessory'});   
     },
     async post(req, res) {
-        console.log(req.body);
+        //console.log(req.body);
         const accessory = {
             name: req.body.name,
             description: req.body.description,
