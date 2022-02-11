@@ -18,7 +18,7 @@ const accessory = require('./controllers/accessory.js');
 
 const { notFound } = require('./controllers/notFound.js');
 const attach = require('./controllers/attach.js');
-const { registerGet, registerPost, loginGet, loginPost, logout } = require('./controllers/auth.js');
+const authController = require('./controllers/auth.js');
 const { isLoggedIn } = require('./services/util.js');
 
 start();
@@ -55,10 +55,7 @@ async function start() {
 
     app.route('/accessory').get(isLoggedIn(),accessory.get).post(isLoggedIn(),accessory.post);
     app.route('/attach/:id').get(isLoggedIn(),attach.get).post(isLoggedIn(),attach.post);
-
-    app.route('/register').get(registerGet).post(registerPost);
-    app.route('/login').get(loginGet).post(loginPost);
-    app.get('/logout', logout);
+    app.use(authController); 
 
     app.all('*', notFound);
 

@@ -1,6 +1,8 @@
+const { mapError } = require("../services/util.js");
+
 module.exports = {
     get(req, res) {
-        res.render('createAccessory', { title: 'Create accessory'});   
+        res.render('createAccessory', { title: 'Create accessory' });   
     },
     async post(req, res) {
         //console.log(req.body);
@@ -16,9 +18,10 @@ module.exports = {
             res.redirect('/');
         }catch(err){
             console.log('Error creating accessory');
-            console.log(err.message);
-            res.redirect('/accessory');
+            //console.log(err.message);
+            res.locals.errors = mapError(err);
+            res.render('createAccessory', { title: 'Create accessory', accessory });
         }
         
     }
-}
+};
